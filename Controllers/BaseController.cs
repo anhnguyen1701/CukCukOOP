@@ -30,7 +30,7 @@ namespace CukCukOOP.Controllers
             try
             {
                 var sql = $"SELECT * FROM {_tableName}";
-                var result = _conn.Query<Employee>(sql);
+                var result = _conn.Query<T>(sql);
 
                 return Ok(result);
             }
